@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urine Strip Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Urine Strip Analyzer</h1>
+            <p>Upload an image of your urine strip to analyze the colors. This tool will identify 10 colors on the strip and return their RGB values.</p>
+        </header>
+        <main>
+            <form id="upload-form" enctype="multipart/form-data">
+                <input type="file" name="image" id="image" accept="image/*" onchange="loadFile(event)" required>
+                <button type="submit">Upload</button>
+            </form>
+            <img id="output" height="200px"/>
+            <div id="results" class="hidden">
+                <h2>Analysis Results</h2>
+                <div id="colors"></div>
+            </div>
+        </main>
+        <footer>
+            <p>Urine Strip Analyzer by Parth Gujral</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+<script>
+    var loadFile = function(event) {
+      var output = document.getElementById('output');
+      output.src = URL.createObjectURL(event.target.files[0]);
+      output.onload = function() {
+        URL.revokeObjectURL(output.src) // free memory
+      }
+    };
+  </script>
+</html>
