@@ -1,3 +1,4 @@
+import time
 from django.shortcuts import render
 from rest_framework.views import APIView
 from .serializers import UrineStripSerializer
@@ -13,9 +14,11 @@ class UploadImage(APIView):
     def post(self, request, *args, **kwargs):
         file_serializer = self.serializer_class(data=request.data)
         if file_serializer.is_valid():
-            file_serializer.save()
+            obj = file_serializer.save()
             image_path = file_serializer.data['image']
             colors = calculate_rgb(image_path)
+            obj.result = colors
+            obj.save()
             return JsonResponse({"colors": colors}, status=status.HTTP_201_CREATED)
         else:
             return JsonResponse(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)

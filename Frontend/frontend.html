@@ -18,6 +18,10 @@
                 <input type="file" name="image" id="image" accept="image/*" onchange="loadFile(event)" required>
                 <button type="submit">Upload</button>
             </form>
+            <div id="loading" class="hidden">
+                <img src="loading.gif" height="400px" width="400px" alt="Loading...">
+                <p>Loading..</p>
+            </div>
             <img id="output" height="200px"/>
             <div id="results" class="hidden">
                 <h2>Analysis Results</h2>
@@ -31,6 +35,7 @@
     <script src="app.js"></script>
 </body>
 <script>
+    // This functions Display the input image
     var loadFile = function(event) {
       var output = document.getElementById('output');
       output.src = URL.createObjectURL(event.target.files[0]);

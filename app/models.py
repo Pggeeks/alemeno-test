@@ -8,4 +8,4 @@ class UrineSample(models.Model):
 
     def __str__(self):
         ## Formating the time so its human readable
-        return self.upload_datetime.strftime('%Y-%m-%d %H:%M:%S')
+        return self.upload_time.strftime('%Y-%m-%d %H:%M:%S')

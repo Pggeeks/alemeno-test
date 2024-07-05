@@ -1,9 +1,11 @@
 import cv2
 import numpy as np
-
+from django.conf import settings
+import os
 def calculate_rgb(filepath):
-    image = cv2.imread(f"../analyzer_project{filepath}")
-
+    PATH=f"{settings.BASE_DIR}{filepath}"
+    fixed_path = PATH.replace("\\", "/")
+    image = cv2.imread(fixed_path)
     # Resize the image for easier processing
     scale_percent = 50
     width = int(image.shape[1] * scale_percent / 100)
