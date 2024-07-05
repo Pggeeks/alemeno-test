@@ -1,7 +1,8 @@
 # Urine Strip Analyzer
 
 ## Overview
-**A sample working video can be found here:-**
+**A sample working video can be found here:- https://drive.google.com/file/d/1a7gwisvg2kw2DJdgbcAt7ArunGgg0q3b/view?usp=sharing**
+
 The Urine Strip Analyzer is a web application designed to help users analyze the colors on a urine test strip. By uploading an image of their urine strip, users can receive the RGB values of 10 distinct colors present on the strip. This tool leverages OpenCV for image processing and is built with a Django/Django Rest Framework backend and a simple HTML/CSS/JavaScript frontend.
 **By Parth Gujral**
 ## Features
@@ -20,5 +21,9 @@ The Urine Strip Analyzer is a web application designed to help users analyze the
 - **Run Django Server on 8000 port**
 - **Open -> Frontend -> frontend.html ( in browser to test)**
 - **Sample Images can be found in results folder**
-- **Video Demonstrating the project is here:-**
+- **Video Demonstrating the project is here:- https://drive.google.com/file/d/1a7gwisvg2kw2DJdgbcAt7ArunGgg0q3b/view?usp=sharing**
+## Admin Credentials
+- Username:- admin
+- email:- admin@gmail.com
+- password:- admin123
 
