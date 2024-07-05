@@ -1,4 +1,5 @@
 # Urine Strip Analyzer
+![svgexport-5](https://github.com/Pggeeks/alemeno-test/assets/82941619/77e87bfe-88ef-4a20-82c4-4d26bbbb54a4)
 
 ## Overview
 **A sample working video can be found here:- https://drive.google.com/file/d/1a7gwisvg2kw2DJdgbcAt7ArunGgg0q3b/view?usp=sharing**
